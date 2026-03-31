@@ -68,7 +68,7 @@ button {
   flex-direction: column;
   filter: blur(1px);
   
-  animation: bwFlicker 2s infinite;
+  animation: bwFlicker 5s infinite;
 }
 
 /* Text animation */
@@ -150,14 +150,13 @@ function yesClick() {
 
 
   setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("prank").style.display = "flex";
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("prank").style.display = "flex";
+  document.body.style.background = "black";
+  document.body.style.animation = "shake 0.3s 5";
 
-    document.body.style.animation = "shake 0.3s";
-
-    typeText("Ú òa bị lừa rồi nha!\nChúc mọi người 1/4 vui vẻee");
-  }, 120000); 
-}
+  typeText("Ú òa bị lừa rồi nha!\nChúc mọi người 1/4 vui vẻee");
+}, 120000);
 
 function typeText(text) {
   let i = 0;
